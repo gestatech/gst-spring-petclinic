@@ -1,0 +1,12 @@
+.cixp-fieldset {
+    display: block !important;
+    -webkit-margin-start: 2px !important;
+    -webkit-margin-end: 2px !important;
+    -webkit-padding-before: 0.35em !important;
+    -webkit-padding-start: 0.75em !important;
+    -webkit-padding-end: 0.75em !important;
+    -webkit-padding-after: 0.625em !important;
+    min-width: -webkit-min-content !important;
+    border: 2px groove threedface !important;
+    border-image: initial !important;
+}
