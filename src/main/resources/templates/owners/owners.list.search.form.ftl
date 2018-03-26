@@ -1,7 +1,7 @@
 <form id="owners-list-paginated-search-form" onsubmit="return false">
     <fieldset id="cixp-fieldset-id" class="cixp-fieldset mdl-color--grey-200">
         <legend>
-            <button id="button-reset" class="mdl-button mdl-button--raised mdl-button--colored mdl-js-button mdl-js-ripple-effect" type="submit">
+            <button id="button-expend" class="mdl-button mdl-button--raised mdl-button--colored mdl-js-button mdl-js-ripple-effect" type="submit">
                 <i class="material-icons mdl-color-text--white" role="presentation">import_export</i>
                 <span class="mdl-typography--font-bold mdl-color-text--white">FILTER By</span>
             </button>
