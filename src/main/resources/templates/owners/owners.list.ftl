@@ -9,20 +9,19 @@
             <div class="mdl-card__title" style="padding-bottom: 10px;padding-top: 10px;">
                 <div class="mdl-layout-spacer"></div>
             </div>
-            <table id="owners-list-paginated"
-                   class="mdl-data-table mdl-typography--text-left mdl-shadow--2dp" style="width:100%">
+            <table id="owners-list-paginated" class="table table-striped table-bordered" cellspacing="0" width="100%">
                 <thead>
-                <tr>
-                    <th><span>ID</span></th>
-                    <th><span>FIRST NAME</span></th>
-                    <th><span>LAST NAME</span></th>
-                    <th><span>ADDRESS</span></th>
-                    <th><span>CITY</span></th>
-                    <th><span>TELEPHONE</span></th>
-                    <th><span>DATE OF BIRTH</span></th>
-                    <th><span>AGE</span></th>
-                    <th><span></span></th>
-                </tr>
+                    <tr>
+                        <th>ID</th>
+                        <th>FIRST NAME</th>
+                        <th>LAST NAME</th>
+                        <th>ADDRESS</th>
+                        <th>CITY</th>
+                        <th>TELEPHONE</th>
+                        <th>DATE OF BIRTH</th>
+                        <th>AGE</th>
+                        <th></th>
+                    </tr>
                 </thead>
                 <tbody></tbody>
             </table>
