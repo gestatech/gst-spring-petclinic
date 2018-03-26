@@ -29,11 +29,11 @@ function expandFilterMenu(selectors) {
         var isWrappedInDiv = $(fieldset.children()[0]).is('div');
 
         if (isWrappedInDiv) {
-            fieldset.find("div").slideToggle();
+            fieldset.find("div").fadeToggle( "slow", "linear" );
         } else {
             fieldset.wrapInner("<div>");
             $(this).appendTo($(this).parent().parent());
-            fieldset.find("div").slideToggle();
+            fieldset.find("div").fadeToggle( "slow", "linear" );
         }
     });
 };
