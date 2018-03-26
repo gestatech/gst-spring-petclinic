@@ -30,7 +30,7 @@ $(document).ready(function () {
         language: {
             loadingRecords: '<div class="mdl-spinner mdl-js-spinner is-active" style="z-index: 9999;"></div>',
             processing: '<div class="mdl-spinner mdl-js-spinner is-active" style="z-index: 9999;"></div>',
-            infoFiltered: ""
+            //infoFiltered: ""
         },
         columns: [
             {data: 'id', name: "ID"},
@@ -138,4 +138,6 @@ $(document).ready(function () {
         cleaserSearchFields();
         ownersListPaginatedTable.ajax.reload();
     }, 600000);
+
+    expandFilterMenu("fieldset#cixp-fieldset-id legend");
 });

@@ -3,9 +3,6 @@
 <script type="text/javascript" src='${requestContext.contextPath}/js/vendors/jquery.dataTables.min.js'></script>
 <script type="text/javascript" src='${requestContext.contextPath}/js/vendors/material.min.js'></script>
 
-<#--<script type="text/javascript" src='${requestContext.contextPath}/js/vendors/dataTables.bootstrap.js'></script>-->
-<#--<script type="text/javascript" src='${requestContext.contextPath}/js/vendors/dataTables.responsive.js'></script>-->
-
 <script type="text/javascript" src='${requestContext.contextPath}/js/vendors/dataTables.material.min.js'></script>
 <script type="text/javascript" src="${requestContext.contextPath}/js/vendors/dataTables.friendly.js"></script>
 <script type="text/javascript" src='${requestContext.contextPath}/js/vendors/nprogress.js'></script>

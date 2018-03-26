@@ -23,3 +23,18 @@ function convertToTimestamp(dateFromPicker) {
     return  date.getTime();
 };
 
+function expandFilterMenu(selectors) {
+    $(selectors).click(function () {
+        var fieldset = $(this).parent();
+        var isWrappedInDiv = $(fieldset.children()[0]).is('div');
+
+        if (isWrappedInDiv) {
+            fieldset.find("div").slideToggle();
+        } else {
+            fieldset.wrapInner("<div>");
+            $(this).appendTo($(this).parent().parent());
+            fieldset.find("div").slideToggle();
+        }
+    });
+};
+

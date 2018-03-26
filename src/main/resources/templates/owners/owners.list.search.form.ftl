@@ -1,6 +1,11 @@
 <form id="owners-list-paginated-search-form" onsubmit="return false">
-    <fieldset class="cixp-fieldset mdl-color--grey-200">
-        <legend class="mdl-typography--font-bold mdl-color-text--indigo">FILTER By</legend>
+    <fieldset id="cixp-fieldset-id" class="cixp-fieldset mdl-color--grey-200">
+        <legend>
+            <button id="button-reset" class="mdl-button mdl-button--raised mdl-button--colored mdl-js-button mdl-js-ripple-effect" type="submit">
+                <i class="material-icons mdl-color-text--white" role="presentation">import_export</i>
+                <span class="mdl-typography--font-bold mdl-color-text--white">FILTER By</span>
+            </button>
+        </legend>
         <div class="mdl-card__supporting-text mdl-color-text--grey-600">
             <div class="row">
                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">

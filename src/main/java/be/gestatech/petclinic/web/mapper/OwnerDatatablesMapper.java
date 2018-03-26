@@ -63,12 +63,13 @@ public class OwnerDatatablesMapper implements DataTablesMapper<Owner, OwnerRespo
         DataTablesResponse<OwnerResponse> output = new DataTablesResponse<>();
         output.setData(ownerResponses);
         output.setDraw(input.getDraw());
-        if (Objects.equals(owners.size(), input.getRecordsFiltered())) {
+        if (Objects.equals(ownerResponses.size(), input.getRecordsFiltered())) {
             output.setRecordsFiltered(input.getRecordsFiltered());
+            output.setRecordsTotal(input.getRecordsTotal());
         } else {
-            output.setRecordsFiltered(owners.size() + 1);
+            output.setRecordsFiltered(ownerResponses.size());
+            output.setRecordsTotal(ownerResponses.size());
         }
-        output.setRecordsTotal(input.getRecordsTotal());
         output.setError(input.getError());
         return output;
     }
