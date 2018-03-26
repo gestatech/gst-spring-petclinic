@@ -14,7 +14,6 @@
 <link rel="stylesheet" type="text/css" href="${requestContext.contextPath}/css/vendors/nprogress.css">
 
 <link rel="stylesheet" type="text/css" href="${requestContext.contextPath}/css/custom/mdl.fancy.tooltip.css">
-<link rel="stylesheet" type="text/css" href="${requestContext.contextPath}/css/custom/mdl.selectfield.css">
 <link rel="stylesheet" type="text/css" href="${requestContext.contextPath}/css/custom/fieldset.css">
 <link rel="stylesheet" type="text/css" href="${requestContext.contextPath}/css/custom/style.css">
 

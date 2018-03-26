@@ -21,13 +21,13 @@
                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                     <input id="minimunDateOfBirthSearchField"
                            class="mdl-textfield__input"
-                           autocomplete="off">
+                           autocomplete="off" placeholder="YYYY-MM-DD HH:mm:ss.SSS">
                     <label class="mdl-textfield__label" for="minimunDateOfBirthSearchField">DATE OF BITH (FROM)</label>
                 </div>
                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                     <input id="maximunDateOfBirthSearchField"
                            class="mdl-textfield__input"
-                           autocomplete="off">
+                           autocomplete="off" placeholder="YYYY-MM-DD HH:mm:ss.SSS">
                     <label class="mdl-textfield__label" for="maximunDateOfBirthSearchField">DATE OF BITH (TO)</label>
                 </div>
                 <button id="button-reset" class="mdl-button mdl-button--colored mdl-button--raised mdl-js-button mdl-js-ripple-effect" type="submit">
