@@ -2,9 +2,12 @@ package be.gestatech.petclinic.web.mapper;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 import java.util.Objects;
 import java.util.stream.Collectors;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -19,6 +22,8 @@ import be.gestatech.petclinic.web.function.OwnerFunction;
 
 @Component
 public class OwnerDatatablesMapper implements DataTablesMapper<Owner, OwnerResponse> {
+
+    Logger logger = LoggerFactory.getLogger(OwnerDatatablesMapper.class);
 
     private TimestampMapper timestampMapper;
 
@@ -43,33 +48,34 @@ public class OwnerDatatablesMapper implements DataTablesMapper<Owner, OwnerRespo
 
     @Override
     public DataTablesResponse<OwnerResponse> mapToWebResponse(DataTablesResponse<Owner> input) {
-
         List<OwnerResponse> ownerResponses = new ArrayList<>();
-        List<Owner> owners = ownerFunction.groupByOwnersLastName(input);
-        for (Owner owner : owners) {
+        Map<String, List<Owner>> ownersPerLastName = ownerFunction.groupByOwnersLastName(input);
+        logger.error("ownersPerLastName {}", ownersPerLastName.toString());
+        ownersPerLastName.entrySet().forEach(owner -> {
+            List<Owner> owners = owner.getValue();
             OwnerResponse ownerResponse = new OwnerResponse();
-            ownerResponse.setId(owner.getId());
-            ownerResponse.setFirstName(owner.getFirstName());
-            ownerResponse.setLastName(owner.getLastName());
-            ownerResponse.setAddress(owner.getAddress());
-            ownerResponse.setCity(owner.getCity());
-            ownerResponse.setTelephone(owner.getTelephone());
-            ownerResponse.setPets(owner.getPets());
-            ownerResponse.setDateOfBirth(timestampMapper.mapToString(owner.getDateOfBirth()));
-            ownerResponse.setAge(ageCalculatorFunction.compute(owner.getDateOfBirth()));
+            logger.error("owner.getKey() {}", owner.getKey());
+            ownerResponse.setLastName(owner.getKey());
+            owners.forEach(ownerByLastNamer -> {
+                logger.error("owner.getKey() {}", owner.getKey());
+                logger.error(" ownerByLastNamer.getLastName() {}", ownerByLastNamer.getLastName());
+                ownerResponse.setId(ownerByLastNamer.getId());
+                ownerResponse.setFirstName(ownerByLastNamer.getFirstName());
+                ownerResponse.setAddress(ownerByLastNamer.getAddress());
+                ownerResponse.setCity(ownerByLastNamer.getCity());
+                ownerResponse.setTelephone(ownerByLastNamer.getTelephone());
+                ownerResponse.setPets(ownerByLastNamer.getPets());
+                ownerResponse.setDateOfBirth(timestampMapper.mapToString(ownerByLastNamer.getDateOfBirth()));
+                ownerResponse.setAge(ageCalculatorFunction.compute(ownerByLastNamer.getDateOfBirth()));
+            });
             ownerResponses.add(ownerResponse);
-        }
+        });
 
         DataTablesResponse<OwnerResponse> output = new DataTablesResponse<>();
         output.setData(ownerResponses);
         output.setDraw(input.getDraw());
-        if (Objects.equals(ownerResponses.size(), input.getRecordsFiltered())) {
-            output.setRecordsFiltered(input.getRecordsFiltered());
-            output.setRecordsTotal(input.getRecordsTotal());
-        } else {
-            output.setRecordsFiltered(ownerResponses.size());
-            output.setRecordsTotal(ownerResponses.size());
-        }
+        output.setRecordsFiltered(input.getRecordsFiltered());
+        output.setRecordsTotal(input.getRecordsTotal());
         output.setError(input.getError());
         return output;
     }

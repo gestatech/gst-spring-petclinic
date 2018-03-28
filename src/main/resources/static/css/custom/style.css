@@ -391,7 +391,7 @@ table.dataTable thead .sorting_desc_disabled {
 
 .dataTables_paginate {
     text-align: right !important;
-    display: none !important;
+    padding-top: 15px !important;
 }
 
 div.pagination .mdl-button {
@@ -432,7 +432,6 @@ div.pagination .mdl-button {
 
 .dataTables_filter {
     float: left !important;
-    display: none !important;
 }
 
 .dataTables_length {
@@ -491,4 +490,3 @@ div.pagination .mdl-button {
 .scrollStyle {
     overflow-x: auto !important;
 }
-

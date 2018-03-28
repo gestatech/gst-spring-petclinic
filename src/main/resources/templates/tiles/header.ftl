@@ -1,4 +1,4 @@
-<header class="cixp-header mdl-layout__header mdl-color--blue-grey-800 mdl-color-text--white">
+<header class="cixp-header mdl-layout__header--transparent mdl-layout__header mdl-color--blue-grey-800 mdl-color-text--white">
     <div class="mdl-layout__header-row">
         <span class="mdl-layout-title mdl-color-text--white">${title}</span>
         <div class="mdl-layout-spacer"></div>

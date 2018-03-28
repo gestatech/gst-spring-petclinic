@@ -1,10 +1,11 @@
 package be.gestatech.petclinic.web.function;
 
 import java.util.List;
+import java.util.Map;
 
 import be.gestatech.petclinic.core.datatables.dto.DataTablesResponse;
 
-public interface genericDTOFunction<T, R> {
+public interface genericFunction<T, R> {
 
-    List<R> groupByOwnersLastName(DataTablesResponse<T> response);
+    Map<String, List<R>> groupByOwnersLastName(DataTablesResponse<T> response);
 }

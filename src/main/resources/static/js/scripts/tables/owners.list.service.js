@@ -8,19 +8,12 @@ $(document).ready(function () {
 
     var ownersListPaginatedTable = $('#owners-list-paginated').DataTable({
         serverSide: true,
-        deferRender: true,
-        responsive: true,
         processing: true,
-        stateSave: true,
-        paging:true,
-        lengthChang: false,
-        pageLength: 100,
-        lengthMenu: [25, 50,75, 100],
+        paging: true,
         pagingType: 'full_numbers',
-        dom: 'lrtip',
-        scroller:true,
-        scrollY: 450,
-        scrollCollapse:true,
+        pageLength: 100,
+        lengthMenu: [10, 25, 50,75, 100],
+        dom: 'ilrtp',
         ajax: {
             url: requestURL,
             type: 'GET',
@@ -30,7 +23,6 @@ $(document).ready(function () {
         language: {
             loadingRecords: '<div class="mdl-spinner mdl-js-spinner is-active" style="z-index: 9999;"></div>',
             processing: '<div class="mdl-spinner mdl-js-spinner is-active" style="z-index: 9999;"></div>',
-            //infoFiltered: ""
         },
         columns: [
             {data: 'id', name: "ID"},

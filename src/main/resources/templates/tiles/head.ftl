@@ -11,6 +11,7 @@
 <link rel="stylesheet" type="text/css" href="${requestContext.contextPath}/css/vendors/material.icons.css">
 <link rel="stylesheet" type="text/css" href="${requestContext.contextPath}/css/vendors/material.min.css">
 <link rel="stylesheet" type="text/css" href="${requestContext.contextPath}/css/vendors/dataTables.material.min.css">
+<#--<link rel="stylesheet" type="text/css" href="${requestContext.contextPath}/css/vendors/dataTables.fixedHeader.css">-->
 <link rel="stylesheet" type="text/css" href="${requestContext.contextPath}/css/vendors/nprogress.css">
 
 <link rel="stylesheet" type="text/css" href="${requestContext.contextPath}/css/custom/mdl.fancy.tooltip.css">

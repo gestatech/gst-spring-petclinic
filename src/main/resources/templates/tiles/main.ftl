@@ -12,7 +12,13 @@
     <#include "header.ftl">
     <#include "sidenav.ftl">
     <main class="mdl-layout__content mdl-color--grey-100">
-        <#nested>
+        <div class="mdl-cell mdl-cell--12-col mdl-cell--8-col-tablet mdl-cell--12-col-desktop">
+            <#nested>
+        </div>
+        <footer class="mdl-mini-footer mdl-color--white">
+            <!-- Footer Content -->
+        </footer>
+        <div class="mdl-layout__obfuscator"></div>
     </main>
 </div>
 </body>

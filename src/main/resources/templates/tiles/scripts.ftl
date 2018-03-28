@@ -4,6 +4,7 @@
 <script type="text/javascript" src='${requestContext.contextPath}/js/vendors/material.min.js'></script>
 
 <script type="text/javascript" src='${requestContext.contextPath}/js/vendors/dataTables.material.min.js'></script>
+<#--<script type="text/javascript" src='${requestContext.contextPath}/js/vendors/dataTables.fixedHeader.js'></script>-->
 <script type="text/javascript" src="${requestContext.contextPath}/js/vendors/dataTables.friendly.js"></script>
 <script type="text/javascript" src='${requestContext.contextPath}/js/vendors/nprogress.js'></script>
 
